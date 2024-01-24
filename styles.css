@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+
+}
+
+button.pluss {
+    background-color: green;
+}
+
+button.minus {
+    background-color: red;
+}

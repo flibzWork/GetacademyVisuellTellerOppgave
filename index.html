@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visuell Teller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+    <button value="pluss" onclick="plusse()" id="pluss" class="pluss">+</button>
+    <br />
+    <span id="utdata">1</span>
+    <br />
+    <button value="minus" onclick="trekkeFra()" id="minus" class="minus">-</button>
+    </div>
+    
+    <script>
+        const utdata = document.getElementById('utdata');
+        function sjekk() {
+            const utdataTall = Number(utdata.textContent);
+            document.getElementById('minus').style.visibility = utdataTall <= 0 ?
+            'hidden' :
+            'visible';
+        }
+
+        function plusse() {
+            utdata.textContent = Number(utdata.textContent) + 1;
+            sjekk();
+        }
+
+        function trekkeFra() {
+            utdata.textContent = Number(utdata.textContent) - 1;
+            sjekk();
+        }
+    </script>
+</body>
+</html>
